@@ -30,7 +30,7 @@ export default function GalleryPage() {
       const data = await response.json();
       setData(data);
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'An error occurred');
+      setError('An error occurred');
     } finally {
       setLoading(false);
     }
@@ -61,7 +61,7 @@ export default function GalleryPage() {
       {!loading && !error && data && (
         <>
           <p className="text-gray-600 mb-6 text-center">
-            Displaying {data.records.length} artworks from the Harvard Art Museums.
+            Displaying {data.records.length} artworks
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
