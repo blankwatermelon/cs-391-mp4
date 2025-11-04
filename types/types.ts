@@ -21,3 +21,7 @@ export interface HarvardAPIResponse {
   };
   records: HarvardObject[];
 }
+
+export interface ArtworkCardProps {
+  artwork: HarvardObject;
+}

@@ -1,8 +1,4 @@
-import { HarvardObject } from '@/types/types';
-
-interface ArtworkCardProps {
-  artwork: HarvardObject;
-}
+import { ArtworkCardProps } from "@/types/types";
 
 export default function ArtworkCard({ artwork }: ArtworkCardProps) {
   return (
@@ -10,7 +6,7 @@ export default function ArtworkCard({ artwork }: ArtworkCardProps) {
       {artwork.primaryimageurl ? (
         <img
           src={artwork.primaryimageurl}
-          alt={artwork.title || 'Artwork'}
+          alt={artwork.title || "Artwork"}
           className="w-full h-150 object-cover "
         />
       ) : (
@@ -18,20 +14,20 @@ export default function ArtworkCard({ artwork }: ArtworkCardProps) {
           <p className="text-gray-500">No image available</p>
         </div>
       )}
-      
+
       <div className="p-4">
         <h3 className="text-xl font-semibold mb-2 line-clamp-2 text-black">
-          {artwork.title || 'Untitled'}
+          {artwork.title || "Untitled"}
         </h3>
-        
+
         {artwork.people && artwork.people.length > 0 && (
           <p className="text-gray-700 mb-1">{artwork.people[0].name}</p>
         )}
-        
+
         {artwork.dated && (
           <p className="text-gray-600 text-sm mb-1">{artwork.dated}</p>
         )}
-        
+
         {artwork.classification && (
           <p className="text-gray-600 text-sm">{artwork.classification}</p>
         )}

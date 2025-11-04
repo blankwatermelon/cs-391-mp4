@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -8,7 +8,8 @@ export default function Home() {
           Harvard Art Museums Explorer
         </h1>
         <p className="text-xl text-gray-600 mb-8">
-          Discover masterpieces from one of the world's most prestigious art collections
+          Discover masterpieces from one of the world's most prestigious art
+          collections
         </p>
         <Link
           href={"/gallery"}
