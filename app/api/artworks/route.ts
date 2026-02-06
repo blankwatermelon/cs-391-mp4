@@ -6,8 +6,8 @@ export async function GET(request: Request) {
   }
 
   try {
-    // generate random page number (1-1000)
-    const randomPage = Math.floor(Math.random() * 1000) + 1;
+    // generate random page number (1-500)
+    const randomPage = Math.floor(Math.random() * 500) + 1;
 
     const response = await fetch(
       `https://api.harvardartmuseums.org/object?apikey=${apiKey}&size=20&hasimage=1&page=${randomPage}`
